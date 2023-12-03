@@ -1,8 +1,13 @@
-function AddBookForm() {
+function AddBookForm({ userInput, onFormChange, onFormClick }) {
   return (
     <form className="add-book-form">
-      <input className="user-input" placeholder="Book title"></input>
-      <button className="add-book-button" type="submit">
+      <input
+        value={userInput}
+        onChange={onFormChange}
+        className="user-input"
+        placeholder="Book title"
+      ></input>
+      <button onClick={onFormClick} className="add-book-button" type="submit">
         Add book
       </button>
     </form>
