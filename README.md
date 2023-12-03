@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# React Book List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### **Assignment Objective:**
 
-## Available Scripts
+In this assignment, you will create a Book List application using React. You will develop a web application where users can add books to their book list and remove books from their book list. The application will focus on React components, state management, and basic event handling. This project is designed to enhance your understanding of fundamental React concepts by building a simple yet functional web application. You will iteratively add features to manage and display a list of books.
 
-In the project directory, you can run:
+**For each step below, commit your code to your Git repository before moving to the next step.** This will help you practice good coding habits (commit often!) and also allow your instructors to see your commit history as you move through the steps.
 
-### `npm start`
+#### **Step 1: Initial Setup**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Use `create-react-app` to set up your project environment. Clear out all of the unnecessary content.
+- In `App`, create a basic function component. Start with a simple heading and a paragraph describing your page.
+- Run the React server to make sure your setup was done correctly.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### **Step 2: Creating a Child Component**
 
-### `npm test`
+- To `App`, add a child component that will display the list of books.
+- Create a `BookList` component that displays a list of 3 pre-defined books (Hint: this is the child).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### **Step 3: Introducing Props**
 
-### `npm run build`
+- Modify the `BookList` component so that it does not display pre-defined books, but instead displays books that it receives as props.
+- In `App`, make sure to pass the list of books to `BookList`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### **Step 4: Managing State**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Now, you need to make the list of books be dynamic instead of a static list of pre-defined books. Introduce a state in your `App` component to keep track of the list of books.
+- You need a way for users to add new books! Add a new child component in `App` that will allow user input, called `AddBookForm.`
+- Implement the `AddBookForm` component using a React form.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### **Step 5: Event Handling and Dynamic Rendering**
 
-### `npm run eject`
+- When the user submits a new book title, the list of books in `App` needs to be updated! Add event handling to manage user inputs.
+- Use the state in the `App` component to dynamically render the list of books in `BookList`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### **Step 6: Extending Functionality**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Finally, we also want users to take books off of their book list. Extend your `App` functionality so that:
+  - A clickable X shows up beside the name of each book
+  - When clicked, the list of books is updated so that the selected book is removed from the list
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### **Step 7: Adding Data Persistence**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Create a mock REST API for your webpage using mockapi.io
+- Include GET, POST and DELETE requests when books are added, viewed and deleted
 
-## Learn More
+#### **Submit:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- A link to your GitHub repository containing the project code. Ensure that your repository is public so it can be accessed and evaluated.
+- A screenshot of your application with a list of your favorite books!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### **Additional challenges for practice:**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add a feature to edit the title of a book in the list.
+- Introduce simple styling to improve the UI/UX of your application.
+- Make it possible for the user to upload an image of the book cover along with the title, and display the books as their covers with titles listed underneath. (Hint: a new component, `Book`, might help!)
+- Make it possible for the user to include a URL to where to purchase the book, and hyperlink the title of the book to the purchase page.
+- Any additional features you can think of! The more features you add, the more comfortable you'll get with React!
