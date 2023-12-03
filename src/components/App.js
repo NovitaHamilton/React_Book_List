@@ -10,7 +10,15 @@ function App() {
         😊
       </p>
       <div className="book-list">
-        <BookList />
+        <BookList
+          books={
+            <ul>
+              <li>Kite Runner</li>
+              <li>The House in the Cerulean Sea Book by TJ Klune</li>
+              <li>The Handmaid's Tail</li>
+            </ul>
+          }
+        />
       </div>
     </div>
   );
