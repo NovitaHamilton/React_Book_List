@@ -1,2 +1,16 @@
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
 
+.App h1 {
+  font-size: 5rem;
+}
 
+.App p,
+.book-list li {
+  font-size: 3rem;
+}
