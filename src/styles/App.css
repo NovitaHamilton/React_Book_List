@@ -16,12 +16,33 @@
 }
 
 .book-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 40%;
+}
+
+.book-item {
+  border: 0.2rem solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
 }
 
 .add-book-form {
   display: flex;
   flex-direction: row;
-  width: 40%;
+  justify-content: center;
+  width: 38%;
 }
 
 .user-input {

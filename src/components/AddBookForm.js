@@ -7,7 +7,7 @@ function AddBookForm({ userInput, onFormChange, onFormClick }) {
         className="user-input"
         placeholder="Book title"
       ></input>
-      <button onClick={onFormClick} className="add-book-button" type="submit">
+      <button onClick={onFormClick} className="add-book-button">
         Add book
       </button>
     </form>
