@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .App h1 {
@@ -11,6 +11,26 @@
 }
 
 .App p,
-.book-list li {
+.book-list {
   font-size: 3rem;
+}
+
+.book-list {
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+}
+
+.user-input {
+  font-size: 2.5rem;
+  padding: 1.5rem 2rem;
+  width: 70%;
+}
+
+.add-book-button {
+  font-size: 2rem;
+  width: 20%;
 }
