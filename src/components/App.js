@@ -1,25 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/App.css';
 import BookList from './BookList';
 import AddBookForm from './AddBookForm';
+import booksService from '../services/booksService';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   // State to keep track of list of books
-  const [books, setBooks] = useState([
-    {
-      id: 1,
-      title: 'Kite Runner',
-    },
-    {
-      id: 2,
-      title: 'The House in the Cerulean Sea',
-    },
-    {
-      id: 3,
-      title: `Handmaid's Tail`,
-    },
-  ]);
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    booksService.getAllBooks().then((data) => setBooks(data || []));
+  }, []);
 
   // State to capture user's input
   const [userInput, setUserInput] = useState('');
@@ -30,37 +22,40 @@ function App() {
     const newUserInput = e.target.value;
     console.log('New User Input:', newUserInput);
     setUserInput(newUserInput);
+    console.log('we are here');
   }
 
   // Handle new book title submission
-  function handleFormClick(e) {
+  async function handleFormClick(e) {
+    console.log('we are here');
     e.preventDefault();
     const newBook = {
       id: uuidv4(),
       title: userInput,
     };
-    console.log(newBook);
-    const updatedBooks = [...books, newBook];
-    console.log('Updated Books:', updatedBooks);
-    setBooks(updatedBooks);
-    setUserInput('');
+    console.log('New Book:', newBook);
+    booksService.addBook(newBook).then(() => {
+      setUserInput('');
+      booksService.getAllBooks().then((data) => setBooks(data));
+    });
   }
 
   // Handle delete button click
-  function handleDeleteClick(e, id) {
-    console.log(e); // Log the type of e
+  async function handleDeleteClick(e, id) {
     console.log(id);
     e.preventDefault();
-    const updatedBooks = books.filter((book) => book.id !== id); // Filter out the book with the given id
-    setBooks(updatedBooks);
+    booksService.deleteBook(id).then(() => {
+      booksService.getAllBooks().then((data) => setBooks(data));
+    });
   }
 
   return (
     <div className="App">
-      <h1>My Reads</h1>
+      <h1>Welcome to Chirpy Chapters! 🐦📚</h1>
       <p>
-        Add book titles that you have read and would recommend others to read.
-        😊
+        Got a book you can't stop talking about? Share it here! It's our little
+        spot for swapping top picks – no judgments, just good books. Join in and
+        let's trade recommendations. Excited to see what's on your shelf! 🤓
       </p>
       <AddBookForm
         userInput={userInput}
