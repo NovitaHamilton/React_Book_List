@@ -1,4 +1,14 @@
-# React Book List Application
+# Chirpy Chapters - Book Recommendation List Application made with React 
+
+A simple application of book recommendations that can be used among friends.
+
+### **Ideas of Features to be added**
+- Add a feature to edit the title of a book in the list.
+- Add a feature to input the author, recommended by, whether the user has the book to lend to others
+- Connect it with booklist API
+- Add a feature to track books that are borrowed
+- Add a feature where users can add comments about a particular book
+  
 
 #### **Assignment Objective:**
 
