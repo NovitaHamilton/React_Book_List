@@ -3,7 +3,6 @@ import '../styles/App.css';
 import BookList from './BookList';
 import AddBookForm from './AddBookForm';
 import booksService from '../services/booksService';
-import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   // State to keep track of list of books
@@ -26,13 +25,7 @@ function App() {
   }
 
   // Handle new book title submission
-  async function handleFormClick(e) {
-    console.log('we are here');
-    e.preventDefault();
-    const newBook = {
-      id: uuidv4(),
-      title: userInput,
-    };
+  async function handleFormClick(newBook) {
     console.log('New Book:', newBook);
     booksService.addBook(newBook).then(() => {
       setUserInput('');

@@ -1,4 +1,17 @@
+import { v4 as uuidv4 } from 'uuid';
+
 function AddBookForm({ userInput, onFormChange, onFormClick }) {
+  const handleAddBook = (e) => {
+    e.preventDefault();
+    const newBook = {
+      id: uuidv4(),
+      title: userInput,
+    };
+    console.log('New Book in addbook Form: ', newBook);
+
+    onFormClick(newBook);
+  };
+
   return (
     <form className="add-book-form">
       <input
@@ -7,7 +20,7 @@ function AddBookForm({ userInput, onFormChange, onFormClick }) {
         className="user-input"
         placeholder="Book title"
       ></input>
-      <button onClick={onFormClick} className="add-book-button">
+      <button onClick={handleAddBook} className="add-book-button">
         Add book
       </button>
     </form>
