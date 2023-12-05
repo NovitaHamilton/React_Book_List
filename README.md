@@ -1,4 +1,4 @@
-# Chirpy Chapters - Book Recommendation List Application made with React 
+# Chirpy Chapters - Book Recommendation Application made with React 
 
 A simple application of book recommendations that can be used among friends.
 
