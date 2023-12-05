@@ -4,31 +4,46 @@
   flex-direction: column;
   justify-content: center;
   gap: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  padding: 3rem;
+  width: 90%;
+  text-align: center;
+  color: rgb(78, 77, 77);
 }
 
 .App h1 {
-  font-size: 5rem;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .App p,
 .book-list {
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 
 .book-list {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  width: 40%;
+  width: 50%;
+  background-color: #b1e4f2de;
+  padding: 3rem;
+  border: 0.2rem solid;
+  border-radius: 3.5rem;
 }
 
 .book-item {
-  border: 0.2rem solid;
+  align-items: center;
+  border: 0.1rem solid;
+  border-radius: 2rem;
+  background-color: #ddb4ffbc;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1.5rem;
+  width: 80%;
 }
 
 .delete-button {
@@ -42,16 +57,40 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 38%;
+  width: 50%;
 }
 
 .user-input {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 1.5rem 2rem;
-  width: 70%;
+  width: 75%;
+  border: none;
 }
 
 .add-book-button {
-  font-size: 2rem;
-  width: 20%;
+  font-size: 1.75rem;
+  width: 25%;
+  background-color: #b1e4f2de;
+  border: none;
+  padding: 1rem;
+}
+
+/*--------Media Queries------*/
+
+@media (max-width: 800px) {
+  .add-book-form,
+  .book-list {
+    width: 90%;
+  }
+}
+
+@media (max-width: 475px) {
+  html {
+    font-size: 45%;
+  }
+
+  .add-book-form,
+  .book-list .book-item {
+    width: 100%;
+  }
 }

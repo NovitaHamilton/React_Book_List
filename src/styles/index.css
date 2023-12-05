@@ -5,9 +5,14 @@
 
 html {
   font-size: 62.5%; /* Setting 1 rem = 10px;*/
-  color: rgb(40, 39, 39);
 }
 
 body {
   padding: 3rem;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 216, 45, 1) 68%
+  );
+  min-height: 100vh;
 }

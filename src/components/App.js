@@ -46,9 +46,11 @@ function App() {
     <div className="App">
       <h1>Welcome to Chirpy Chapters! 🐦📚</h1>
       <p>
-        Got a book you can't stop talking about? Share it here! It's our little
-        spot for swapping top picks – no judgments, just good books. Join in and
-        let's trade recommendations. Excited to see what's on your shelf! 🤓
+        Got a book you can't stop talking about? Share it here! <br></br>It's
+        our little spot for swapping top picks – no judgments, just good books.{' '}
+        <br></br>
+        Join in and let's trade recommendations. Excited to see what's on your
+        shelf! 🤓
       </p>
       <AddBookForm
         userInput={userInput}
