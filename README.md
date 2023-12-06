@@ -2,6 +2,8 @@
 
 A simple application of book recommendations that can be used among friends.
 
+Link to deployed page: https://chirpy-chapters.netlify.app/
+
 ### **Ideas of Features to be added**
 - Add a feature to edit the title of a book in the list.
 - Add a feature to input the author, recommended by, whether the user has the book to lend to others
